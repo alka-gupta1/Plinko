@@ -4,6 +4,9 @@ function Particle(x,y,r){
         this.r = r;
         this.hue = random(360)
         World.add(world,this.body)
+       this.offScreen=function(){
+              var pos = this.body.position;
+              return(pos.x<-50||pos.x>width+10)
     }
     Particle.prototype.show = function(){
         var pos = this.body.position
