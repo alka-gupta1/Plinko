@@ -43,14 +43,20 @@ function draw() {
 
  spray();
  for(var i = 0; i < particles.length; i++){
-	particles[i].show()
+	particles[i].show();
+     if(particles[i].offScreen()){
+	     particles.splice[i,1];
+	     i--
 }
+	 
  for(var i=0;i<pegs.length;i++){
     pegs[i].show()
 }
+	 
  for(var i=0; i<poles.length;i++){
 	poles[i].show()
 }
+	 
 }
 
 function spray(){
